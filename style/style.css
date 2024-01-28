@@ -1,0 +1,157 @@
+@font-face {
+    font-family: PlayfairDisplay, serif;
+    src: url("../fonts/PlayfairDisplay-Medium.ttf") format("ttf");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: PlayfairDisplay, serif;
+    src: url("../fonts/PlayfairDisplay-SemiBold.ttf") format("ttf");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Bitter, serif;
+    src: url("../fonts/Bitter-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, .website {
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 19px;
+    font-size: 16px;
+}
+
+p {
+    margin: 40px;
+}
+h1, h2 {
+    font-family: PlayfairDisplay, serif;
+    font-style: normal;
+    line-height: 103px;
+    font-size: 86px;
+}
+h1 {
+    font-weight: 600;
+}
+h2 {
+    font-weight: 500;
+}
+
+h3 {
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 28px;
+    font-size: 24px;
+}
+nav {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 28px;
+    font-size: 24px;
+}
+
+.subhead {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 23px;
+    font-size: 20px;
+}
+.section-header {
+    font-family: PlayfairDisplay, serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 115px;
+    font-size: 86px;
+}
+
+.biography-details {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 21px;
+    font-size: 18px;
+}
+
+.blockquote-small {
+    font-family: Bitter, serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 31px;
+    font-size: 26px;
+}
+
+.blockquote-medium {
+    font-family: Bitter, serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 38px;
+    font-size: 32px;
+}
+.designers-header, h4 {
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    line-height: 19px;
+    font-size: 16px;
+}
+
+.strengths-header {
+    font-family: PlayfairDisplay, serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 86px;
+    font-size: 86px;
+}
+
+.strengths-ul {
+    font-family: Bitter, serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 41px;
+    font-size: 34px;
+}
+
+.contacts {
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 26px;
+    font-size: 16px;
+    color: darkgray;
+}
+
+.logo {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 21px;
+    font-size: 18px;
+    color: darkgray;
+}
+
+.logo-bold {
+    font-family: Roboto, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 28px;
+    font-size: 24px;
+    color: darkgray;
+}
+
+.pricing {
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 19px;
+    font-size: 16px;
+    color: darkgray;
+}
