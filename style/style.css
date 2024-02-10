@@ -19,7 +19,7 @@
     font-style: normal;
 }
 
-body, .website {
+body {
     font-family: Roboto, sans-serif;
     font-weight: normal;
     font-style: normal;
@@ -81,7 +81,7 @@ nav {
     font-size: 18px;
 }
 
-.blockquote-small {
+.blockquote-biography {
     font-family: Bitter, serif;
     font-weight: 400;
     font-style: normal;
@@ -89,13 +89,14 @@ nav {
     font-size: 26px;
 }
 
-.blockquote-medium {
+.blockquote-testimonials {
     font-family: Bitter, serif;
     font-weight: 400;
     font-style: normal;
     line-height: 38px;
     font-size: 32px;
 }
+
 .designers-header, h4 {
     font-family: Roboto, sans-serif;
     font-weight: bold;
@@ -138,13 +139,10 @@ nav {
     color: darkgray;
 }
 
-.logo-bold {
-    font-family: Roboto, sans-serif;
+.logo-mod {
     font-weight: 900;
-    font-style: normal;
     line-height: 28px;
     font-size: 24px;
-    color: darkgray;
 }
 
 .pricing {
