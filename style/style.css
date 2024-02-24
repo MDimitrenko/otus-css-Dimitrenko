@@ -128,6 +128,8 @@ nav {
     font-style: normal;
     line-height: 38px;
     font-size: 32px;
+    margin: 0;
+    text-align: center;
 }
 
 .designers-header, h4 {
@@ -136,6 +138,7 @@ nav {
     font-style: normal;
     line-height: 19px;
     font-size: 16px;
+    margin: 0;
 }
 
 .strengths-header {
@@ -242,8 +245,58 @@ img
 {
     width: 100%;
     height: 100%;
+    object-fit: contain;
 }
 
 section {
     margin-top: 150px;
+}
+
+.blockquote-section {
+    display: grid;
+    grid-template-columns: 221px;
+    align-content: space-evenly;
+    justify-content: center;
+}
+
+.testimonials-frames {
+    display: grid;
+    height: 760px;
+    grid-template-columns: 569px 451px;
+    justify-content: center;
+    gap: 130px;
+
+}
+
+.testimonials-contacts {
+    display: grid;
+    height: 760px;
+    grid-template-columns: 98px 451px;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: space-evenly;
+}
+
+.testimonials-contact-photo {
+    width: 451px;
+    height: 760px;
+    position: relative;
+    grid-row: 1/4;
+    grid-column: 2/3;
+}
+.contacts-item {
+    transform: rotate(-90deg);
+    justify-self: center;
+    align-self: center;
+}
+
+.testimonials-blockquote-photo {
+    width: 221px;
+    height: 333px;
+    position: relative;
+}
+
+#Testimonials {
+    position: absolute;
+    top: 35px;
+    right: -110px;
 }
