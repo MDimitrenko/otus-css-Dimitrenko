@@ -254,31 +254,30 @@ section {
 
 .blockquote-section {
     display: grid;
-    grid-template-columns: 221px;
+    grid-template-columns: 49%;
     align-content: space-evenly;
     justify-content: center;
 }
 
 .testimonials-frames {
     display: grid;
-    height: 760px;
-    grid-template-columns: 569px 451px;
+    grid-template-columns: 39.5% 31.32%;
     justify-content: center;
-    gap: 130px;
+    gap: 9%;
 
 }
 
 .testimonials-contacts {
     display: grid;
-    height: 760px;
-    grid-template-columns: 98px 451px;
+    max-height: 760px;
+    grid-template-columns: 17.2% 79.3%;
     grid-template-rows: repeat(3, 1fr);
     justify-content: space-evenly;
 }
 
 .testimonials-contact-photo {
-    width: 451px;
-    height: 760px;
+    width: 100%;
+    height: 100%;
     position: relative;
     grid-row: 1/4;
     grid-column: 2/3;
@@ -290,8 +289,8 @@ section {
 }
 
 .testimonials-blockquote-photo {
-    width: 221px;
-    height: 333px;
+    width: 100%;
+    height: 100%;
     position: relative;
 }
 
@@ -299,4 +298,9 @@ section {
     position: absolute;
     top: 35px;
     right: -110px;
+}
+
+.a-contact {
+    color: black;
+    text-decoration: none;
 }
