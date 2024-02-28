@@ -308,6 +308,7 @@ section {
     display: grid;
     grid-auto-flow: column;
     gap: 20px;
+    justify-content: left;
     margin-left: 20px;
     overflow: scroll;
     align-items: end;
@@ -328,5 +329,13 @@ section {
 }
 
 #Designers {
-    margin-left: 119px;
+    margin-left: 138px;
+}
+
+.designer-frame-description {
+    margin-top: 25px;
+}
+
+.first-frame-description {
+    margin-left: 240px;
 }
