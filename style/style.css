@@ -141,6 +141,9 @@ nav {
     margin: 0;
 }
 
+.designers-description {
+    margin: 0;
+}
 .strengths-header {
     font-family: Playfair Display, serif;
     font-weight: 500;
@@ -299,6 +302,43 @@ section {
     top: 35px;
     right: -110px;
 }
+
+.designers {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    justify-content: left;
+    margin-left: 20px;
+    overflow: scroll;
+    align-items: end;
+}
+.jess-wonder-image {
+    width: 572px;
+    height: 538px;
+}
+
+.kameron-clein-image {
+    width: 336px;
+    height: 439px;
+}
+
+.louisse-red-image {
+    width: 331px;
+    height: 439px;
+}
+
+#Designers {
+    margin-left: 138px;
+}
+
+.designer-frame-description {
+    margin-top: 25px;
+}
+
+.first-frame-description {
+    margin-left: 240px;
+}
+
 
 .a-contact {
     color: black;
