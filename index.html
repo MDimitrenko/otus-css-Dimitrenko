@@ -8,19 +8,19 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,900;1,400&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,900;1,400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="./style/style.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
 </head>
 <body>
 <header class="menu-header">
     <h1>Mod</h1>
     <nav>
-        <a class="menu" href="#Biography">Biography</a>
-        <a class="menu" href="#Designers">Designers</a>
-        <a class="menu" href="#Testimonials">Testimonials</a>
-        <a class="menu" href="#StrongPoints">Strong points</a>
+        <a class="menu" href="#biography-section" >B<span class="hide-mobile">iography</span></a>
+        <a class="menu" href="#designers-section">D<span class="hide-mobile">esigners</span></a>
+        <a class="menu" href="#testimonials-section">T<span class="hide-mobile">estimonials</span></a>
+        <a class="menu" href="#strong-points-section">S<span class="hide-mobile">trong points</span></a>
     </nav>
 </header>
 <main>
@@ -31,47 +31,64 @@
             <p class="subhead">Modern Web Studio</p>
         </div>
     </header>
-    <section class="biography-section">
+    <section class="biography-section" id="biography-section">
         <div class="biography-photo">
             <header id="Biography" >
                 <h3 class="h3-biography">
                     Biography
                 </h3>
             </header>
-            <img src="img/jared-weiss-P3cB0ynqYBw-unsplash%201.jpg" alt="Katya Mills">
+            <picture>
+                <source srcset="img/katya-mills-mobile.jpg" media="(max-width: 450px)" />
+                <img src="img/jared-weiss-P3cB0ynqYBw-unsplash%201.jpg" alt="Katya Mills">
+            </picture>
+
 
         </div>
         <div class="biography-info">
             <h4 class="section-header">
-                Katya Mills
+                <span class="dash">-</span>Katya Mills
             </h4>
-            <div >
-                <p class="biography-details">Art Director</p>
-                <p class="biography-details">
-                    Scenography / Styling / Creative Photography / Design
-                </p>
+            <div class="professions">
+
+
+                    <p class="biography-details-main">Art Director</p>
+                    <p class="biography-details">
+                        <span class="dash">-</span>Scenography
+                        <br class="dash"><span class="dash">-</span><span class="slash"> / </span>Styling
+                        <br class="dash"><span class="dash">-</span><span class="slash"> / </span>Creative Photography
+                        <br class="dash"><span class="dash">-</span><span class="slash"> / </span>Design
+                    </p>
+                    <header id="mobile-Biography" >
+                        <h3 class="h3-biography">
+                            Biography
+                        </h3>
+                    </header>
+
             </div>
 
             <blockquote class="blockquote-biography">
                 <div class="rectangle"></div>
-                <p class="p-blockquote">“The more I deal with the work</p>
-                <p class="p-blockquote">as something that is my own,</p>
-                <p class="p-blockquote">as something that is personal,</p>
-                <p class="p-blockquote">the more successful it is.”</p>
+                <p class="p-blockquote">“The more I deal with the work as something that is my own,as something that is personal,
+                    the more successful it is.”</p>
             </blockquote>
         </div>
 
     </section>
-    <section>
+    <section id="designers-section">
         <header id="Designers">
-            <h3>
+            <h3 class="h3-mobile">
                 Designers
             </h3>
         </header>
         <div class="designers">
             <div>
                 <div class="jess-wonder-image">
-                    <img src="img/spurwing-agency-r6LceZ3ckpM-unsplash%201.jpg" alt="Jess Wonder">
+                    <picture>
+                        <source srcset="img/jess-wonder-modile.jpg" media="(max-width: 450px)" />
+                        <img src="img/spurwing-agency-r6LceZ3ckpM-unsplash%201.jpg" alt="Jess Wonder">
+                    </picture>
+
                 </div>
                 <div class="designer-frame-description first-frame-description">
                     <h4>JESS WONDER</h4>
@@ -112,8 +129,12 @@
         </div>
     </section>
 
-    <section>
-
+    <section id="testimonials-section">
+        <header id="Testimonials-mobile" >
+            <h3 class="h3-biography">
+                Testimonials
+            </h3>
+        </header>
         <div class="testimonials-frames">
             <div class="testimonials-contacts">
                 <div class="testimonials-contact-photo">
@@ -134,12 +155,16 @@
                     I just really want to do good work and work with some great people, people who challenge me.
                 </blockquote>
                 <div class="testimonials-blockquote-photo">
-                    <img src="img/sinitta-leunen-YaReHIzNdRw-unsplash%201.jpg" alt="string bag">
+                    <picture>
+                        <source srcset="img/string-bag-mobile.jpg" media="(max-width: 450px)" />
+                        <img src="img/sinitta-leunen-YaReHIzNdRw-unsplash%201.jpg" alt="string bag">
+                    </picture>
+
                 </div>
             </div>
         </div>
     </section>
-    <section>
+    <section id="strong-points-section">
         <header id="StrongPoints">
             <h3 class="h3-strong-points">
                 Strong points
@@ -172,7 +197,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="strong-points-img">
+            <div class="strong-points-img hide-mobile">
                 <img src="img/keghan-crossland-ZZxmc66SjfM-unsplash%201.jpg" alt="cafe">
             </div>
         </div>
