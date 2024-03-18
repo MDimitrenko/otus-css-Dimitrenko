@@ -43,8 +43,7 @@ h1 {
 }
 h2 {
     font-weight: 500;
-    margin-top: 120px;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 h3 {
@@ -65,16 +64,42 @@ h3 {
     right: -100px;
 
 }
+@media (max-width: 768px) {
+    #Biography {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+    .h3-biography {
+        transform: none;
+        margin-right: 0;
+    }
+
+}
 nav {
     font-family: Roboto, sans-serif;
     font-weight: 500;
     font-style: normal;
     line-height: 28px;
     font-size: 24px;
-    /*display: inline;*/
-    position: absolute;
-    right: 37px;
-    top: 53px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+    gap: 4vw;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    nav {
+
+        flex-grow: 1;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        align-content: center;
+        justify-content: end;
+        gap: 1px;
+    }
 }
 
 .subhead {
@@ -161,7 +186,7 @@ nav {
     font-size: 34px;
     list-style-type: none;
     padding: 0;
-    margin: 30px 0;
+    margin: 25px 0;
 
 }
 
@@ -171,7 +196,8 @@ nav {
     font-style: normal;
     line-height: 26px;
     font-size: 16px;
-    color: darkgray;
+    color: #ffffff;
+    margin: 0;
 }
 
 .logo {
@@ -180,7 +206,8 @@ nav {
     font-style: normal;
     line-height: 21px;
     font-size: 18px;
-    color: darkgray;
+    color: #ffffff;
+    margin: 0;
 }
 
 .logo-mod {
@@ -195,17 +222,26 @@ nav {
     font-style: normal;
     line-height: 19px;
     font-size: 16px;
-    color: darkgray;
+    color: #ffffff;
+    margin: 0;
 }
 
 .menu-header {
     margin: 0 25px;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .menu {
     color: black;
-    margin-left: 52px;
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        text-align: end;
+    }
 }
 
 .header {
@@ -220,33 +256,59 @@ nav {
 }
 
 .header-name {
-    width: 690px;
+    max-width: 690px;
     height: 360px;
     margin: 0 auto;
     text-align: center;
     background-color: white;
     padding: 1px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 14px;
+    align-content: center;
 }
 
 .biography-section {
     display: flex;
     justify-content: center;
-    gap: 139px;
+    gap: 10vw;
 }
 
 .biography-photo{
-    width: 571px;
-    height: 840px;
+    max-width: 571px;
     position: relative;
 }
 
+@media (max-width: 768px) {
+    .biography-photo{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .biography-info {
-    width: 455px;
-    height: 840px;
+    max-width: 455px;
+    max-height: 840px;
     display: flex;
     gap: 36px;
     justify-content: center;
     flex-direction: column;
+}
+
+@media (max-width: 768px) {
+
+    .biography-section {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        gap: 10vw;
+        margin-left: 10px;
+    }
+
+    .biography-info {
+        margin-left: 10px;
+    }
 }
 
 img
@@ -275,6 +337,16 @@ section {
 
 }
 
+@media (max-width: 768px) {
+
+    .testimonials-frames {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        gap: 3px;
+
+    }
+}
 .testimonials-contacts {
     display: grid;
     max-height: 760px;
@@ -306,6 +378,12 @@ section {
     position: absolute;
     top: 35px;
     right: -110px;
+}
+@media (max-width: 768px) {
+    #Testimonials {
+        top: -100px;
+        left: 100px;
+    }
 }
 
 .designers {
@@ -377,7 +455,7 @@ section {
 
 .strengths {
     width: 451px;
-    height: 554px;
+    max-height: 554px;
 
     flex-shrink: 0;
 }
@@ -389,4 +467,43 @@ section {
 
 .h3-strong-points {
     margin-left: 258px;
+}
+
+footer {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 20px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        background-color: #000000;
+        flex-direction: column;
+        justify-content: center;
+        padding: 70px 20px;
+    }
+}
+
+address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    address {
+        align-self: flex-start;
+        order: 2;
+    }
+
+    .pricing {
+        align-self: flex-start;
+        order: 3;
+    }
+
+    .logo {
+        align-self: flex-end;
+        order: 1;
+    }
 }
