@@ -1,9 +1,6 @@
 @import "./variables";
 @import "./mixins";
 
-
-
-
 #Biography {
   position: absolute;
   top: 18px;
@@ -19,35 +16,38 @@
   margin: 0;
 }
 
-.biography-section__blockquote {
-  @include bitter-font(31px, 26px);
-  margin: 0;
-}
 
 .biography-section {
   display: flex;
   justify-content: center;
   gap: 10vw;
-}
 
-.biography-section__photo{
-  max-width: 571px;
-  position: relative;
-}
+  &__blockquote {
+    @include bitter-font(31px, 26px);
+    margin: 0;
+  }
 
-.biography-section__info {
-  max-width: 455px;
-  max-height: 840px;
-  display: flex;
-  gap: 36px;
-  justify-content: center;
-  flex-direction: column;
-}
+  &__photo{
+    max-width: 571px;
+    position: relative;
+  }
 
-.biography-section__header {
-  @include playfair-display-font(115px, 86px, 500);
-  padding-right: 100px;
-  margin: 0;
+  &__info {
+    max-width: 455px;
+    max-height: 840px;
+    display: flex;
+    gap: 36px;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__header {
+    @include playfair-display-font(115px, 86px, 500);
+    padding-right: 100px;
+    margin: 0;
+  }
+
+
 }
 
 
@@ -58,23 +58,23 @@
     right: 0;
   }
 
-
-  .biography-section__photo{
-    display: flex;
-    flex-direction: column;
-  }
-
   .biography-section {
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr;
     gap: 10vw;
     margin-left: 10px;
+
+    &__photo{
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__info {
+      margin-left: 10px;
+    }
   }
 
-  .biography-section__info {
-    margin-left: 10px;
-  }
 }
 
 .dash {
@@ -95,14 +95,6 @@
     display: none;
   }
 
-  .professions__list {
-    order: 3;
-  }
-
-  .professions__main {
-    order: 1;
-  }
-
   #mobile-Biography {
     order: 2;
   }
@@ -112,38 +104,49 @@
     justify-content: center;
     grid-template-columns: 1fr;
     gap: 10vw;
-    margin-left: 10px;
+
+    &__info {
+      margin: 0 10px;
+      order: 1;
+    }
+
+    &__photo {
+      order: 2;
+    }
+
+    &__blockquote {
+      order: 2;
+      font-weight: 300;
+      line-height: 36px;
+      font-size: 30px;
+    }
+
+    &__header {
+      order: 3;
+      font-weight: 400;
+      line-height: 85px;
+      font-size: 64px;
+      padding: 0;
+    }
   }
 
-  .biography-section__info {
-    margin-left: 10px;
-    order: 1;
-  }
 
-  .biography-section__photo {
-    order: 2;
-  }
 
   .professions {
     order: 1;
     display: grid;
     grid-template-columns: 2fr 1fr;
+
+    &__list {
+      order: 3;
+    }
+
+    &__main {
+      order: 1;
+    }
   }
 
-  .biography-section__blockquote {
-    order: 2;
-    font-weight: 300;
-    line-height: 36px;
-    font-size: 30px;
-  }
 
-  .biography-section__header {
-    order: 3;
-    font-weight: 400;
-    line-height: 85px;
-    font-size: 64px;
-    padding: 0;
-  }
 
   .dash {
     display: inline;

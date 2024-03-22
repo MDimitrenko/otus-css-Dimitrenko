@@ -8,183 +8,175 @@
 @import "./footer";
 
 body {
-    display: flex;
-    flex-direction: column;
-    @include roboto-font(19px, 16px);
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  @include roboto-font(19px, 16px);
+  margin: 0;
 }
 
 @media (max-width: $max-width-mobile) {
-    main {
-        order: 1;
-    }
-    header {
-        order: 2;
-    }
-    footer {
-        order: 3;
-    }
+  main {
+    order: 1;
+  }
+  header {
+    order: 2;
+  }
+  footer {
+    order: 3;
+  }
 }
 
 p {
-    margin: 40px;
+  margin: 40px;
 }
+
 h1, h2 {
-    @include playfair-display-font(103px, 86px);
-    font-size: 86px;
+  @include playfair-display-font(103px, 86px);
+  font-size: 86px;
 }
+
 h1 {
-    font-weight: 600;
-    margin: 20px 0 12px 0;
+  font-weight: 600;
+  margin: 20px 0 12px 0;
 }
+
 h2 {
-    font-weight: 500;
-    margin: 0;
+  font-weight: 500;
+  margin: 0;
 }
 
 h3 {
-    @include roboto-font(28px, 24px, 700);
+  @include roboto-font(28px, 24px, 700);
 }
 
-
-
 nav {
-    @include roboto-font(28px, 24px, 500);
-    flex-grow: 1;
-    display: flex;
-    justify-content: end;
-    gap: 4vw;
-    align-items: center;
+  @include roboto-font(28px, 24px, 500);
+  flex-grow: 1;
+  display: flex;
+  justify-content: end;
+  gap: 4vw;
+  align-items: center;
 }
 
 @media (max-width: $max-width-mobile) {
-    nav {
-        justify-content: space-around;
-    }
+  nav {
+    justify-content: space-around;
+  }
 }
 
 @media (max-width: $max-width-tablet)  and (min-width: $min-width-tablet) {
-    nav {
-
-        flex-grow: 1;
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        align-content: center;
-        justify-content: end;
-        gap: 1px;
-    }
+  nav {
+    flex-grow: 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    justify-content: end;
+    gap: 1px;
+  }
 }
 
 .header__subhead {
-    @include roboto-font(23px, 20px, 500);
-    margin-top: 1px;
+  @include roboto-font(23px, 20px, 500);
+  margin-top: 1px;
 }
 
 .biography-section__blockquote-p {
-    margin: 0;
+  margin: 0;
 }
 
 .rectangle {
-    border: 3px solid;
-    width: 20px;
-    margin-bottom: 20px;
+  border: 3px solid;
+  width: 20px;
+  margin-bottom: 20px;
 }
 
 
 h4 {
-    @include roboto-font(19px, 16px, 700);
-    margin: 0;
+  @include roboto-font(19px, 16px, 700);
+  margin: 0;
 }
-
-
-
-
-
-
 
 @media (max-width: $max-width-mobile) {
-    h1 {
-        display: none;
-    }
+  h1 {
+    display: none;
+  }
 
-    .hide-mobile {
-        display: none;
-    }
+  .hide-mobile {
+    display: none;
+  }
 }
-
 
 
 .section-title {
-    transform: rotate(-90deg);
-    margin-right: 0;
+  transform: rotate(-90deg);
+  margin-right: 0;
 }
 @media (max-width: $max-width-tablet) and (min-width: $min-width-tablet) {
 
-    .section-title {
-        transform: none;
-        margin-right: 0;
-    }
+  .section-title {
+    transform: none;
+    margin-right: 0;
+  }
 }
 
 @media (max-width: $max-width-mobile) {
 
-    .section-title {
-        transform: none;
-        margin: 0;
-        line-height: 21px;
-        font-size: 18px;
-        text-align: right;
-    }
+  .section-title {
+    transform: none;
+    line-height: 21px;
+    font-size: 18px;
+    text-align: right;
+  }
 }
 
 .header {
-    background-image: url("../img/header.jpg");
-    background-color: #efdfd3;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 630px;
-    box-sizing: border-box;
-    padding: 135px 0;
+  background-image: url("../img/header.jpg");
+  background-color: #efdfd3;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 630px;
+  box-sizing: border-box;
+  padding: 135px 0;
 }
 
 @media (max-width: $max-width-mobile) {
-    .header {
-        background-image: url("../img/mobile-header.jpg");
-        background-position: left;
-        padding: 0;
-        height: 764px;
-    }
+  .header {
+    background-image: url("../img/mobile-header.jpg");
+    background-position: left;
+    padding: 0;
+    height: 764px;
+  }
 }
 
 .header__name {
-    max-width: 690px;
-    height: 360px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: white;
-    padding: 1px 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    gap: 14px;
-    align-content: center;
+  max-width: 690px;
+  height: 360px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  padding: 1px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 14px;
+  align-content: center;
 }
 
 @media (max-width: $max-width-mobile) {
-    .header__name {
-        height: 344px;
-    }
-    h2 {
-        font-weight: 400;
-        font-size: 70px;
-        line-height: 93px;
-    }
-    .header__subhead {
-        line-height: 21px;
-        font-size: 18px;
-    }
+  .header__name {
+    height: 344px;
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 93px;
+  }
+  .header__subhead {
+    line-height: 21px;
+    font-size: 18px;
+  }
 }
 
 .professions {
@@ -193,38 +185,32 @@ h4 {
 
 img
 {
-    width: 100%;
-    object-fit: contain;
+  width: 100%;
+  object-fit: contain;
 }
-
 
 
 section {
-    margin-top: 150px;
+  margin-top: 150px;
 }
 
 @media (max-width: $max-width-mobile) {
-    section {
-        margin-top: 80px;
-    }
+  section {
+    margin-top: 80px;
+  }
 }
 
 .testimonials-section__blockquote {
-    display: grid;
-    grid-template-columns: 49%;
-    align-content: space-evenly;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: 49%;
+  align-content: space-evenly;
+  justify-content: center;
 }
 @media (max-width: $max-width-mobile) {
-    .testimonials-section__blockquote {
-        order: 1;
-        grid-template-columns: 1fr;
-        margin: 0 13px;
-        gap: 10px;
-    }
+  .testimonials-section__blockquote {
+    order: 1;
+    grid-template-columns: 1fr;
+    margin: 0 13px;
+    gap: 10px;
+  }
 }
-
-
-
-
-
