@@ -6,23 +6,23 @@
   display: flex;
   justify-content: space-between;
 
-  &__a {
+  &__link {
     color: black;
     text-decoration: none;
   }
 
-  &__a:hover {
+  &__link:hover {
     text-decoration: underline;
   }
 
   @media (max-width: $max-width-tablet) and (min-width: $min-width-tablet) {
-    &__a {
+    &__link {
       text-align: end;
     }
   }
 
   @media (max-width: $max-width-mobile) {
-    &__a {
+    &__link {
       font-size: 40px;
       line-height: 48px;
       padding: 21px 0;

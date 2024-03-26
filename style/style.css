@@ -3,20 +3,20 @@
   display: flex;
   justify-content: space-between;
 }
-.menu-header__a {
+.menu-header__link {
   color: black;
   text-decoration: none;
 }
-.menu-header__a:hover {
+.menu-header__link:hover {
   text-decoration: underline;
 }
 @media (max-width: 768px) and (min-width: 451px) {
-  .menu-header__a {
+  .menu-header__link {
     text-align: end;
   }
 }
 @media (max-width: 450px) {
-  .menu-header__a {
+  .menu-header__link {
     font-size: 40px;
     line-height: 48px;
     padding: 21px 0;
@@ -33,7 +33,7 @@
   display: none;
 }
 
-.professions__list, .professions__main {
+.professions__list, .professions__post {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -75,6 +75,15 @@
   font-size: 86px;
   padding-right: 100px;
   margin: 0;
+}
+.biography-section__blockquote-text {
+  margin: 0;
+}
+
+.rectangle {
+  border: 3px solid;
+  width: 20px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 768px) and (min-width: 451px) {
@@ -149,7 +158,7 @@
   .professions__list {
     order: 3;
   }
-  .professions__main {
+  .professions__post {
     order: 1;
   }
   .dash {
@@ -260,7 +269,7 @@
   justify-self: center;
   align-self: center;
 }
-.testimonials-contacts__a-contact {
+.testimonials-contacts__link-contact {
   color: black;
   text-decoration: none;
 }
@@ -354,7 +363,7 @@
   font-size: 86px;
   text-align: center;
 }
-.strengths__ul {
+.strengths__quality {
   font-family: Bitter, serif;
   font-weight: 400;
   font-style: normal;
@@ -388,7 +397,7 @@
     line-height: 46px;
     font-size: 46px;
   }
-  .strengths__ul {
+  .strengths__quality {
     line-height: 29px;
     font-size: 24px;
   }
@@ -574,16 +583,6 @@ nav {
   margin-top: 1px;
 }
 
-.biography-section__blockquote-p {
-  margin: 0;
-}
-
-.rectangle {
-  border: 3px solid;
-  width: 20px;
-  margin-bottom: 20px;
-}
-
 h4 {
   font-family: Roboto, sans-serif;
   font-weight: 700;
@@ -601,19 +600,19 @@ h4 {
     display: none;
   }
 }
-.section-title {
+.section__title {
   transform: rotate(-90deg);
   margin-right: 0;
 }
 
 @media (max-width: 768px) and (min-width: 451px) {
-  .section-title {
+  .section__title {
     transform: none;
     margin-right: 0;
   }
 }
 @media (max-width: 450px) {
-  .section-title {
+  .section__title {
     transform: none;
     line-height: 21px;
     font-size: 18px;
