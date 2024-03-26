@@ -1,0 +1,143 @@
+#Biography {
+  position: absolute;
+  top: 18px;
+  right: -100px;
+}
+
+#mobile-Biography {
+  display: none;
+}
+
+.professions__list, .professions__main {
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 21px;
+  font-size: 18px;
+  margin: 0;
+}
+
+.biography-section__blockquote {
+  font-family: Bitter, serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 31px;
+  font-size: 26px;
+  margin: 0;
+}
+
+.biography-section {
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+}
+
+.biography-section__photo {
+  max-width: 571px;
+  position: relative;
+}
+
+.biography-section__info {
+  max-width: 455px;
+  max-height: 840px;
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.biography-section__header {
+  font-family: Playfair Display, serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 115px;
+  font-size: 86px;
+  padding-right: 100px;
+  margin: 0;
+}
+
+@media (max-width: 768px) and (min-width: 451px) {
+  #Biography {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+  .biography-section__photo {
+    display: flex;
+    flex-direction: column;
+  }
+  .biography-section {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    gap: 10vw;
+    margin-left: 10px;
+  }
+  .biography-section__info {
+    margin-left: 10px;
+  }
+}
+.dash {
+  display: none;
+}
+
+@media (max-width: 450px) {
+  #Biography {
+    display: none;
+  }
+  #mobile-Biography {
+    display: inline;
+  }
+  .slash {
+    display: none;
+  }
+  .professions__list {
+    order: 3;
+  }
+  .professions__main {
+    order: 1;
+  }
+  #mobile-Biography {
+    order: 2;
+  }
+  .biography-section {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    gap: 10vw;
+    margin-left: 10px;
+  }
+  .biography-section__info {
+    margin-left: 10px;
+    order: 1;
+  }
+  .biography-section__photo {
+    order: 2;
+  }
+  .professions {
+    order: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .biography-section__blockquote {
+    order: 2;
+    font-weight: 300;
+    line-height: 36px;
+    font-size: 30px;
+  }
+  .biography-section__header {
+    order: 3;
+    font-weight: 400;
+    line-height: 85px;
+    font-size: 64px;
+    padding: 0;
+  }
+  .dash {
+    display: inline;
+  }
+  .rectangle {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=biography.css.map */

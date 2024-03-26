@@ -1,0 +1,72 @@
+@import "./variables";
+@import "./mixins";
+
+.designer {
+  &__header {
+    @include roboto-font(19px, 16px, 700);
+    margin: 0;
+  }
+
+  &__description {
+    margin: 0;
+  }
+
+  &__frame-description {
+    margin-top: 25px;
+  }
+
+  &__first-frame-description {
+    margin-left: 240px;
+  }
+
+  &__kameron-clein-image {
+    min-width: 336px;
+  }
+
+  &__louisse-red-image {
+    min-width: 331px;
+  }
+
+  &__jess-wonder-image {
+    min-width: 572px;
+  }
+
+}
+
+
+
+.designers-section__designers {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+  justify-content: left;
+  margin-left: 20px;
+  overflow: scroll;
+  align-items: end;
+}
+
+#Designers {
+  margin-left: 138px;
+}
+
+
+@media (max-width: $max-width-mobile) {
+  #Designers {
+    margin-left: 20px;
+
+  }
+  .designers-section__title_mobile {
+    line-height: 21px;
+    font-size: 18px;
+  }
+  .designer__first-frame-description {
+    margin-left: 0;
+  }
+
+  .designer__jess-wonder-image {
+    min-width: 310px;
+  }
+}
+
+
+
