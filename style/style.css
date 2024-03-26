@@ -20,12 +20,26 @@
 /*}*/
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: Roboto, sans-serif;
     font-weight: normal;
     font-style: normal;
     line-height: 19px;
     font-size: 16px;
     margin: 0;
+}
+
+@media (max-width: 450px) {
+    main {
+        order: 1;
+    }
+    header {
+        order: 2;
+    }
+    footer {
+        order: 3;
+    }
 }
 
 p {
@@ -64,7 +78,10 @@ h3 {
     right: -100px;
 
 }
-@media (max-width: 768px) {
+#mobile-Biography {
+    display: none;
+}
+@media (max-width: 768px) and (min-width: 451px) {
     #Biography {
         position: relative;
         top: 0;
@@ -76,6 +93,28 @@ h3 {
     }
 
 }
+
+@media (max-width: 450px) {
+    #Biography {
+        display: none;
+    }
+    #mobile-Biography {
+        display: inline;
+    }
+    .h3-biography {
+        transform: none;
+        margin: 0;
+        line-height: 21px;
+        font-size: 18px;
+        text-align: right;
+        padding-right: 13px;
+    }
+    .slash {
+        display: none;
+    }
+
+}
+
 nav {
     font-family: Roboto, sans-serif;
     font-weight: 500;
@@ -89,7 +128,13 @@ nav {
     align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 450px) {
+    nav {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 768px)  and (min-width: 451px) {
     nav {
 
         flex-grow: 1;
@@ -120,13 +165,29 @@ nav {
     margin: 0;
 }
 
-.biography-details {
+.dash {
+   display: none;
+}
+
+.biography-details, .biography-details-main {
     font-family: Roboto, sans-serif;
     font-weight: 500;
     font-style: normal;
     line-height: 21px;
     font-size: 18px;
     margin: 0;
+}
+
+@media (max-width: 450px) {
+    .biography-details {
+        order: 3;
+    }
+    .biography-details-main {
+        order: 1;
+    }
+    #mobile-Biography {
+        order: 2;
+    }
 }
 
 .blockquote-biography {
@@ -157,6 +218,15 @@ nav {
     text-align: center;
 }
 
+@media (max-width: 450px) {
+    .blockquote-testimonials {
+        font-weight: 300;
+        line-height: 36px;
+        font-size: 30px;
+        padding: 0 36px;
+    }
+}
+
 .designers-header, h4 {
     font-family: Roboto, sans-serif;
     font-weight: bold;
@@ -178,6 +248,14 @@ nav {
     text-align: center;
 }
 
+@media (max-width: 450px) {
+    .strengths-header {
+        font-weight: 400;
+        line-height: 46px;
+        font-size: 46px;
+    }
+}
+
 .strengths-ul {
     font-family: Bitter, serif;
     font-weight: 400;
@@ -188,6 +266,13 @@ nav {
     padding: 0;
     margin: 25px 0;
 
+}
+
+@media (max-width: 450px) {
+    .strengths-ul {
+        line-height: 29px;
+        font-size: 24px;
+    }
 }
 
 .contacts {
@@ -233,14 +318,31 @@ nav {
 
 }
 
+@media (max-width: 450px) {
+    h1 {
+        display: none;
+    }
+}
+
 .menu {
     color: black;
     text-decoration: none;
 }
+.menu:hover {
+    text-decoration: underline;
+}
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 451px) {
     .menu {
         text-align: end;
+    }
+}
+
+@media (max-width: 450px) {
+    .menu {
+        font-size: 40px;
+        line-height: 48px;
+        padding: 21px 0;
     }
 }
 
@@ -253,6 +355,15 @@ nav {
     height: 630px;
     box-sizing: border-box;
     padding: 135px 0;
+}
+
+@media (max-width: 450px) {
+    .header {
+        background-image: url("../img/mobile-header.jpg");
+        background-position: left;
+        padding: 0;
+        height: 764px;
+    }
 }
 
 .header-name {
@@ -269,6 +380,21 @@ nav {
     align-content: center;
 }
 
+@media (max-width: 450px) {
+    .header-name {
+        height: 344px;
+    }
+    h2 {
+        font-weight: 400;
+        font-size: 70px;
+        line-height: 93px;
+    }
+    .subhead {
+        line-height: 21px;
+        font-size: 18px;
+    }
+}
+
 .biography-section {
     display: flex;
     justify-content: center;
@@ -280,7 +406,7 @@ nav {
     position: relative;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px)  and (min-width: 451px) {
     .biography-photo{
         display: flex;
         flex-direction: column;
@@ -296,7 +422,7 @@ nav {
     flex-direction: column;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 451px) {
 
     .biography-section {
         display: grid;
@@ -311,10 +437,61 @@ nav {
     }
 }
 
+.professions {
+
+}
+
+@media (max-width: 450px) {
+
+    .biography-section {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        gap: 10vw;
+    }
+
+    .biography-info {
+        margin: 0 10px;
+        order: 1;
+    }
+
+    .biography-photo {
+        order: 2;
+    }
+    .professions {
+        order: 1;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        padding: 16p;
+    }
+
+    .blockquote-biography {
+        order: 2;
+        font-weight: 300;
+        line-height: 36px;
+        font-size: 30px;
+    }
+
+    .section-header {
+        order: 3;
+        font-weight: 400;
+        line-height: 85px;
+        font-size: 64px;
+        padding: 0;
+    }
+
+    .dash {
+        display: inline;
+    }
+
+    .rectangle {
+        display: none;
+    }
+}
+
 img
 {
     width: 100%;
-    height: 100%;
     object-fit: contain;
 }
 
@@ -322,11 +499,25 @@ section {
     margin-top: 150px;
 }
 
+@media (max-width: 450px) {
+    section {
+        margin-top: 80px;
+    }
+}
+
 .blockquote-section {
     display: grid;
     grid-template-columns: 49%;
     align-content: space-evenly;
     justify-content: center;
+}
+@media (max-width: 450px) {
+    .blockquote-section {
+        order: 1;
+        grid-template-columns: 1fr;
+        margin: 0 13px;
+        gap: 10px;
+    }
 }
 
 .testimonials-frames {
@@ -337,7 +528,7 @@ section {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 451px) {
 
     .testimonials-frames {
         display: grid;
@@ -345,6 +536,17 @@ section {
         justify-content: center;
         gap: 3px;
 
+    }
+}
+
+@media (max-width: 450px) {
+
+    .testimonials-frames {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        gap: 3px;
+        margin-top: 20px;
     }
 }
 .testimonials-contacts {
@@ -355,12 +557,25 @@ section {
     justify-content: space-evenly;
 }
 
+@media (max-width: 450px) {
+    .testimonials-contacts {
+        order: 2;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 20px;
+    }
+}
+
 .testimonials-contact-photo {
-    width: 100%;
-    height: 100%;
+    max-width: 451px;
     position: relative;
     grid-row: 1/4;
     grid-column: 2/3;
+}
+@media (max-width: 450px) {
+    .testimonials-contact-photo {
+        display: none;
+    }
 }
 .contacts-item {
     transform: rotate(-90deg);
@@ -368,6 +583,12 @@ section {
     align-self: center;
 }
 
+@media (max-width: 450px) {
+    .contacts-item {
+        transform: none;
+
+    }
+}
 .testimonials-blockquote-photo {
     width: 100%;
     height: 100%;
@@ -379,10 +600,19 @@ section {
     top: 35px;
     right: -110px;
 }
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 451px) {
     #Testimonials {
         top: -100px;
         left: 100px;
+    }
+}
+
+#Testimonials-mobile {
+    display: none;
+}
+@media (max-width: 450px) {
+    #Testimonials-mobile {
+        display: inline;
     }
 }
 
@@ -396,22 +626,36 @@ section {
     align-items: end;
 }
 .jess-wonder-image {
-    width: 572px;
-    height: 538px;
+    min-width: 572px;
+}
+@media (max-width: 451px) {
+    .jess-wonder-image {
+        min-width: 310px;
+    }
 }
 
 .kameron-clein-image {
-    width: 336px;
-    height: 439px;
+    min-width: 336px;
+
 }
 
 .louisse-red-image {
-    width: 331px;
-    height: 439px;
+    min-width: 331px;
+
 }
 
 #Designers {
     margin-left: 138px;
+}
+@media (max-width: 450px) {
+    #Designers {
+        margin-left: 20px;
+
+    }
+    .h3-mobile {
+        line-height: 21px;
+        font-size: 18px;
+    }
 }
 
 .designer-frame-description {
@@ -420,6 +664,13 @@ section {
 
 .first-frame-description {
     margin-left: 240px;
+}
+
+@media (max-width: 450px) {
+    .first-frame-description {
+        margin-left: 0;
+    }
+    
 }
 
 
@@ -449,7 +700,7 @@ section {
 
 .strong-points-img {
     width: 335px;
-    height: 554px;
+    /*max-height: 554px;*/
     flex-shrink: 0;
 }
 
@@ -460,6 +711,19 @@ section {
     flex-shrink: 0;
 }
 
+@media (max-width: 450px) {
+    .strengths {
+        order: 1;
+        width: 200px
+    }
+
+    .strong-points-img {
+        order: 2;
+    }
+    .hide-mobile {
+        display: none;
+    }
+}
 .strengths-list {
     display: flex;
     justify-content: center;
@@ -469,6 +733,15 @@ section {
     margin-left: 258px;
 }
 
+@media (max-width: 450px) {
+    .h3-strong-points {
+        margin-left: 20px;
+        line-height: 21px;
+        font-size: 18px;
+        text-align: left;
+    }
+}
+
 footer {
     background-color: #000000;
     display: flex;
@@ -476,12 +749,37 @@ footer {
     padding: 70px 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 451px) {
     footer {
         background-color: #000000;
         flex-direction: column;
         justify-content: center;
         padding: 70px 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    footer {
+        background-color: #000000;
+        flex-direction: column;
+        justify-content: center;
+        padding: 70px 10px;
+    }
+
+    address {
+        align-self: flex-start;
+        order: 2;
+    }
+
+    .pricing {
+        align-self: flex-start;
+        order: 3;
+        margin: 10px 0 0 0;
+    }
+
+    .logo {
+        align-self: flex-end;
+        order: 1;
     }
 }
 
@@ -491,7 +789,7 @@ address {
     justify-content: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 451px) {
     address {
         align-self: flex-start;
         order: 2;
@@ -506,4 +804,11 @@ address {
         align-self: flex-end;
         order: 1;
     }
+}
+
+@media (max-width: 450px) {
+    li {
+        padding-top: 15px;
+    }
+
 }
