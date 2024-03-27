@@ -15,9 +15,34 @@
     text-decoration: underline;
   }
 
+  &__message {
+    width: 35px;
+  }
+
   @media (max-width: $max-width-tablet) and (min-width: $min-width-tablet) {
     &__a {
       text-align: end;
+    }
+
+    &__biography {
+      order: 1;
+    }
+
+    &__designers {
+      order: 2;
+    }
+
+    &__message {
+      order: 5;
+      margin-left: auto;
+    }
+
+    &__testimonials {
+      order: 3;
+    }
+
+    &__strong-points {
+      order: 4;
     }
   }
 
