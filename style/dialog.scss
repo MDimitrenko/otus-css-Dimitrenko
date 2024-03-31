@@ -1,28 +1,15 @@
+@import "./mixins";
+
 .dialog-modal {
-  width: 520px;
+  width: 512px;
   gap: 24px;
-  //padding: 20px;
   border: none;
-  //border-radius: 10px;
   background-color: rgba(255, 255, 255, 0);
   box-sizing: border-box;
 }
 
-.modal-form__element {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  width: 100%;
-}
-
-.modal-form__buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
 .modal-form {
-  padding: 30px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -30,40 +17,119 @@
   opacity: 1;
   z-index: 1;
   border-radius: 10px;
+
+  &__element {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    @include roboto-font(21px, 18px, 700);
+  }
+
+  &__question {
+    @include roboto-font(21px, 18px)
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  &__buttons_close {
+    background-color: #ffffff;
+    border: 1px solid darkgray;
+    color: #000000;
+    @include button;
+  }
+
+  &__buttons_send {
+    background-color: #000000;
+    color: #ffffff;
+    @include button;
+  }
+
+  &__buttons_close:hover, &__buttons_send:hover {
+    @include roboto-font(55px, 23px, 500);
+  }
+
+  &__buttons_send::before {
+    content: "\2b";
+    margin-right: 10px;
+    font-family: FontAwesome;
+  }
+
+  &__header {
+    line-height: 28px;
+    font-size: 25px;
+    font-weight: 700;
+  }
+
 }
 
 .modal-form::after {
   content: '';
   border: #ffffff 2px solid;
-  //background-color: red;
-  transform: rotate(3deg);
+  transform: rotate(2deg);
   position: absolute;
   top: 0;
   left: 0;
   margin: 15px;
-  width: 488px;
-  height: 496px;
+  width: 480px;
+  height: 608px;
   z-index: -1;
   border-radius: 10px;
 }
 
-.modal-form__buttons_close {
-  background-color: #ffffff;
-  color: #000000;
-  width: 180px;
-  line-height: 55px;
-  border-radius: 5px;
+.element-input {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid  #d3d3d3;
+  display: grid;
+  grid-template-columns: 1fr 30px;
 }
 
-.modal-form__buttons_send {
-  background-color: #000000;
-  color: #ffffff;
-  width: 180px;
-  line-height: 55px;
-  border-radius: 5px;
+.element-input:hover {
+  background-color: lightgrey;
 }
-.modal-form__buttons_send::before {
-  content: "\2b";
-  margin-right: 10px;
-  font-family: FontAwesome;
+
+.element-input:focus-within {
+  outline: darkgray 1px solid;
 }
+
+svg {
+  margin-top: 6px;
+  background-color: inherit;
+}
+
+input {
+  @include roboto-font(30px, 18px);
+  appearance: none;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  background-color: inherit;
+}
+
+input:focus {
+  @include roboto-font(30px, 18px);
+  appearance: none;
+  outline: none;
+  padding: 6px 10px;
+}
+
+textarea {
+  height: 135px;
+  @include roboto-font(30px, 18px);
+  padding: 6px 10px;
+  resize: none;
+  appearance: none;
+  border: none;
+  border-radius: 8px;
+  background-color: inherit;
+}
+
+textarea:focus {
+  outline: none;
+}
+
