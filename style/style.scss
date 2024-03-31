@@ -17,6 +17,7 @@ body {
 .page__scroll-locked {
   overflow: hidden;
 }
+
 @media (max-width: $max-width-mobile) {
   main {
     order: 1;
