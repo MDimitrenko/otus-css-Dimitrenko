@@ -217,23 +217,37 @@
     <p class="footer-section__pricing">© 2023 Mod Media. All rights reserved</p>
 </footer>
 <dialog id="modal_window" class="dialog-modal">
-    <div>Get in touch</div>
-    <div>Do you have any questions?</div>
-    <div>Name</div>
-    <div><input type="text"></div>
-    <div>Email</div>
-    <div><input type="email"></div>
-    <div>Comment</div>
-    <div>
-    <textarea rows="5" cols="33">
+    <form class="modal-form">
+        <div>Get in touch</div>
+        <label class="modal-form__element">
+            Do you have any questions?
+        </label>
 
-    </textarea>
-    </div>
-    <button type="button" onclick="{window['modal_window'].close();
-                const body = document.querySelector('body.page');
-                body.classList.toggle('page__scroll-locked');
-    }">Close</button>
-    <button type="button" >Send</button>
+        <label class="modal-form__element">
+            Name
+            <input type="text" name="name" placeholder="3+ Characters" required
+            minlength="3" autofocus>
+        </label>
+
+        <label class="modal-form__element">
+            Email
+            <input type="email" name="email" placeholder="name@email.com" required>
+        </label>
+
+        <label class="modal-form__element">
+            Comment
+            <textarea rows="5" cols="33" name="comment" placeholder="Some text...">
+            </textarea>
+        </label>
+
+        <div class="modal-form__buttons">
+            <button type="button" onclick="{window['modal_window'].close();
+                        const body = document.querySelector('body.page');
+                        body.classList.toggle('page__scroll-locked');
+            }">Close</button>
+            <button type="submit" >Send</button>
+        </div>
+    </form>
 </dialog>
 </body>
 </html>
