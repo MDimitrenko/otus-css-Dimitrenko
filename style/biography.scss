@@ -1,0 +1,165 @@
+@import "./variables";
+@import "./mixins";
+
+#Biography {
+  position: absolute;
+  top: 18px;
+  right: -100px;
+}
+
+#mobile-Biography {
+  display: none;
+}
+
+.professions__list, .professions__post {
+  @include roboto-font(21px, 18px, 500);
+  margin: 0;
+}
+
+.biography-section {
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+
+  &__blockquote {
+    @include bitter-font(31px, 26px);
+    margin: 0;
+  }
+
+  &__photo{
+    max-width: 571px;
+    position: relative;
+  }
+
+  &__info {
+    max-width: 455px;
+    max-height: 840px;
+    display: flex;
+    gap: 36px;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__header {
+    @include playfair-display-font(115px, 86px, 500);
+    padding-right: 100px;
+    margin: 0;
+  }
+
+  &__blockquote-text {
+    margin: 0;
+  }
+
+}
+
+.rectangle {
+  border: 3px solid;
+  width: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: $max-width-tablet) and (min-width: $min-width-tablet) {
+  #Biography {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .biography-section {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    gap: 10vw;
+    margin-left: 10px;
+
+    &__photo{
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__info {
+      margin-left: 10px;
+    }
+  }
+
+}
+
+.dash {
+  display: none;
+}
+
+@media (max-width: $max-width-mobile) {
+
+  #Biography {
+    display: none;
+  }
+  #mobile-Biography {
+    display: inline;
+  }
+
+
+  .slash {
+    display: none;
+  }
+
+  #mobile-Biography {
+    order: 2;
+  }
+
+  .biography-section {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    gap: 10vw;
+
+    &__info {
+      margin: 0 10px;
+      order: 1;
+    }
+
+    &__photo {
+      order: 2;
+    }
+
+    &__blockquote {
+      order: 2;
+      font-weight: 300;
+      line-height: 36px;
+      font-size: 30px;
+    }
+
+    &__header {
+      order: 3;
+      font-weight: 400;
+      line-height: 85px;
+      font-size: 64px;
+      padding: 0;
+    }
+  }
+
+
+
+  .professions {
+    order: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    &__list {
+      order: 3;
+    }
+
+    &__post {
+      order: 1;
+    }
+  }
+
+
+
+  .dash {
+    display: inline;
+  }
+
+  .rectangle {
+    display: none;
+  }
+}
