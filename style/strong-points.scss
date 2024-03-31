@@ -44,7 +44,7 @@
     text-align: center;
   }
 
-  &__ul {
+  &__quality {
     @include bitter-font(41px, 34px);
     list-style-type: none;
     padding: 0;
@@ -82,7 +82,7 @@
     font-size: 46px;
   }
 
-  .strengths__ul {
+  .strengths__quality {
     line-height: 29px;
     font-size: 24px;
   }

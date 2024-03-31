@@ -83,17 +83,6 @@ nav {
   margin-top: 1px;
 }
 
-.biography-section__blockquote-p {
-  margin: 0;
-}
-
-.rectangle {
-  border: 3px solid;
-  width: 20px;
-  margin-bottom: 20px;
-}
-
-
 h4 {
   @include roboto-font(19px, 16px, 700);
   margin: 0;
@@ -109,22 +98,20 @@ h4 {
   }
 }
 
-
-.section-title {
+.section__title {
   transform: rotate(-90deg);
   margin-right: 0;
 }
-@media (max-width: $max-width-tablet) and (min-width: $min-width-tablet) {
 
-  .section-title {
+@media (max-width: $max-width-tablet) and (min-width: $min-width-tablet) {
+  .section__title {
     transform: none;
     margin-right: 0;
   }
 }
 
 @media (max-width: $max-width-mobile) {
-
-  .section-title {
+  .section__title {
     transform: none;
     line-height: 21px;
     font-size: 18px;

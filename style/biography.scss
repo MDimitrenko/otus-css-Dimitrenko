@@ -11,11 +11,10 @@
   display: none;
 }
 
-.professions__list, .professions__main {
+.professions__list, .professions__post {
   @include roboto-font(21px, 18px, 500);
   margin: 0;
 }
-
 
 .biography-section {
   display: flex;
@@ -47,9 +46,17 @@
     margin: 0;
   }
 
+  &__blockquote-text {
+    margin: 0;
+  }
 
 }
 
+.rectangle {
+  border: 3px solid;
+  width: 20px;
+  margin-bottom: 20px;
+}
 
 @media (max-width: $max-width-tablet) and (min-width: $min-width-tablet) {
   #Biography {
@@ -141,7 +148,7 @@
       order: 3;
     }
 
-    &__main {
+    &__post {
       order: 1;
     }
   }
