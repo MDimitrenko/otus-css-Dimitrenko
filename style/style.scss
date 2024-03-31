@@ -14,6 +14,10 @@ body {
   margin: 0;
 }
 
+.page__scroll-locked {
+  overflow: hidden;
+}
+
 @media (max-width: $max-width-mobile) {
   main {
     order: 1;
@@ -68,8 +72,7 @@ nav {
   nav {
     flex-grow: 1;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-content: center;
     justify-content: end;
     gap: 1px;

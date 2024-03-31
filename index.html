@@ -13,15 +13,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Playfair+Display:wght@400..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page">
 <header class="menu-header">
     <h1>Mod</h1>
     <nav>
-        <a class="menu-header__link" href="#biography-section" >B<span class="hide-mobile">iography</span></a>
-        <a class="menu-header__link" href="#designers-section">D<span class="hide-mobile">esigners</span></a>
-        <a class="menu-header__link" href="#testimonials-section">T<span class="hide-mobile">estimonials</span></a>
-        <a class="menu-header__link" href="#strong-points-section">S<span class="hide-mobile">trong points</span></a>
+        <a class="menu-header__link menu-header__biography" href="#biography-section" >B<span class="hide-mobile">iography</span></a>
+        <a class="menu-header__link menu-header__designers" href="#designers-section">D<span class="hide-mobile">esigners</span></a>
+        <a class="menu-header__link menu-header__testimonials" href="#testimonials-section">T<span class="hide-mobile">estimonials</span></a>
+        <a class="menu-header__link menu-header__strong-points" href="#strong-points-section">S<span class="hide-mobile">trong points</span></a>
+        <div class="menu-header__message">
+            <img src="img/message.png" alt="Message" onclick="{window.modal_window.showModal();
+                const body = document.querySelector('body.page');
+                body.classList.toggle('page__scroll-locked');
+            }">
+        </div>
     </nav>
+
 </header>
 <main>
 
@@ -209,5 +216,24 @@
     <p class="footer-section__logo">A product of <span class="footer-section__logo-mod">MOD</span></p>
     <p class="footer-section__pricing">© 2023 Mod Media. All rights reserved</p>
 </footer>
+<dialog id="modal_window" class="dialog-modal">
+    <div>Get in touch</div>
+    <div>Do you have any questions?</div>
+    <div>Name</div>
+    <div><input type="text"></div>
+    <div>Email</div>
+    <div><input type="email"></div>
+    <div>Comment</div>
+    <div>
+    <textarea rows="5" cols="33">
+
+    </textarea>
+    </div>
+    <button type="button" onclick="{window['modal_window'].close();
+                const body = document.querySelector('body.page');
+                body.classList.toggle('page__scroll-locked');
+    }">Close</button>
+    <button type="button" >Send</button>
+</dialog>
 </body>
 </html>

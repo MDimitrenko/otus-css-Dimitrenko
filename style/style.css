@@ -10,9 +10,28 @@
 .menu-header__link:hover {
   text-decoration: underline;
 }
+.menu-header__message {
+  width: 35px;
+}
 @media (max-width: 768px) and (min-width: 451px) {
   .menu-header__link {
     text-align: end;
+  }
+  .menu-header__biography {
+    order: 1;
+  }
+  .menu-header__designers {
+    order: 2;
+  }
+  .menu-header__message {
+    order: 5;
+    margin-left: auto;
+  }
+  .menu-header__testimonials {
+    order: 3;
+  }
+  .menu-header__strong-points {
+    order: 4;
   }
 }
 @media (max-width: 450px) {
@@ -503,6 +522,10 @@ body {
   margin: 0;
 }
 
+.page__scroll-locked {
+  overflow: hidden;
+}
+
 @media (max-width: 450px) {
   main {
     order: 1;
@@ -567,8 +590,7 @@ nav {
   nav {
     flex-grow: 1;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-content: center;
     justify-content: end;
     gap: 1px;
