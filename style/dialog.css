@@ -1,5 +1,5 @@
 .dialog-modal {
-  width: 480px;
+  max-width: 480px;
   gap: 24px;
   padding: 20px;
   border: none;
@@ -24,3 +24,5 @@
   flex-direction: column;
   gap: 24px;
 }
+
+/*# sourceMappingURL=dialog.css.map */
