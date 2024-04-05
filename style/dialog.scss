@@ -41,12 +41,26 @@
     border: 1px solid darkgray;
     color: #000000;
     @include button;
+    transition: background-color 2s 1s ease-out, border 2s 1s ease-out, color 3s ease-out ;
   }
 
   &__buttons_send {
     background-color: #000000;
     color: #ffffff;
     @include button;
+    transition: background-color 2s 1s ease-out, border 2s 1s ease-out, color 3s ease-out ;
+  }
+
+  &__buttons_close:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
+  }
+
+  &__buttons_send:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid darkgray;
   }
 
   &__buttons_close:hover, &__buttons_send:hover {
@@ -70,7 +84,6 @@
 .modal-form::after {
   content: '';
   border: #ffffff 2px solid;
-  transform: rotate(2deg);
   position: absolute;
   top: 0;
   left: 0;
@@ -79,6 +92,21 @@
   height: 608px;
   z-index: -1;
   border-radius: 10px;
+  animation-duration: 3s;
+  animation-name: frame;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes frame {
+  0% {
+
+  }
+
+  100% {
+    transform: rotate(2deg);
+  }
 }
 
 .element-input {
@@ -87,6 +115,7 @@
   border: 1px solid  #d3d3d3;
   display: grid;
   grid-template-columns: 1fr 30px;
+  transition: all 3s ease-in-out;
 }
 
 .element-input:hover {
