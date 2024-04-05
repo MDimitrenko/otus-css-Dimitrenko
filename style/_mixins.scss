@@ -21,3 +21,10 @@
   line-height: $line-height;
   font-size: $font-size;
 }
+
+@mixin button {
+  width: 180px;
+  border-radius: 10px;
+  @include roboto-font(55px, 18px, 500);
+  transition: all 0.3s ease;
+}
