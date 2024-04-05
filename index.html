@@ -220,12 +220,12 @@
     <form class="modal-form">
         <div>Get in touch</div>
         <label class="modal-form__element">
-            Do you have any questions?
+            Do you have any questions? Have something to say? Don't be shy, write to us:
         </label>
 
         <label class="modal-form__element">
             Name
-            <input type="text" name="name" placeholder="3+ Characters" required
+            <input type="text" name="question" placeholder="3+ Characters" required
                    minlength="3" autofocus>
         </label>
 
@@ -240,13 +240,14 @@
         </label>
 
         <div class="modal-form__buttons">
-            <button type="button" onclick="{window['modal_window'].close();
+            <button class="modal-form__buttons_close" type="button" onclick="{window['modal_window'].close();
                         const body = document.querySelector('body.page');
                         body.classList.toggle('page__scroll-locked');
             }">Close</button>
-            <button type="submit" >Send</button>
+            <button class="modal-form__buttons_send"  type="submit" >Send</button>
         </div>
     </form>
 </dialog>
+<script src="https://kit.fontawesome.com/a62101dadf.js" crossorigin="anonymous"></script>
 </body>
 </html>
