@@ -17,6 +17,11 @@
 
   &__message {
     width: 35px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__message:hover {
+    transform: scale(1.15);
   }
 
   @media (max-width: $max-width-tablet) and (min-width: $min-width-tablet) {

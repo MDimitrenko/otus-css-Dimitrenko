@@ -12,6 +12,10 @@
 }
 .menu-header__message {
   width: 35px;
+  transition: all 0.5s ease-in-out;
+}
+.menu-header__message:hover {
+  transform: scale(1.15);
 }
 @media (max-width: 768px) and (min-width: 451px) {
   .menu-header__link {
@@ -564,6 +568,7 @@ address {
   line-height: 55px;
   font-size: 18px;
   transition: all 0.3s ease;
+  transition: background-color 2s 1s ease-out, border 2s 1s ease-out, color 3s ease-out;
 }
 .modal-form__buttons_send {
   background-color: #000000;
@@ -576,6 +581,17 @@ address {
   line-height: 55px;
   font-size: 18px;
   transition: all 0.3s ease;
+  transition: background-color 2s 1s ease-out, border 2s 1s ease-out, color 3s ease-out;
+}
+.modal-form__buttons_close:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+}
+.modal-form__buttons_send:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid darkgray;
 }
 .modal-form__buttons_close:hover, .modal-form__buttons_send:hover {
   font-family: Roboto, sans-serif;
@@ -598,7 +614,6 @@ address {
 .modal-form::after {
   content: "";
   border: #ffffff 2px solid;
-  transform: rotate(2deg);
   position: absolute;
   top: 0;
   left: 0;
@@ -607,14 +622,25 @@ address {
   height: 608px;
   z-index: -1;
   border-radius: 10px;
+  animation-duration: 3s;
+  animation-name: frame;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 
+@keyframes frame {
+  100% {
+    transform: rotate(2deg);
+  }
+}
 .element-input {
   width: 100%;
   border-radius: 8px;
   border: 1px solid #d3d3d3;
   display: grid;
   grid-template-columns: 1fr 30px;
+  transition: all 3s ease-in-out;
 }
 
 .element-input:hover {
