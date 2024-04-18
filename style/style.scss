@@ -100,20 +100,20 @@ h4 {
   }
 }
 
-.section__title {
+.section-title {
   transform: rotate(-90deg);
   margin-right: 0;
 }
 
 @media (max-width: $max-width-tablet) and (min-width: $min-width-tablet) {
-  .section__title {
+  .section-title {
     transform: none;
     margin-right: 0;
   }
 }
 
 @media (max-width: $max-width-mobile) {
-  .section__title {
+  .section-title {
     transform: none;
     line-height: 21px;
     font-size: 18px;
