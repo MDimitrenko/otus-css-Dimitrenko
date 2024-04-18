@@ -36,7 +36,7 @@
     justify-content: center;
   }
 
-  &__buttons_close {
+  &__button_close {
     background-color: #ffffff;
     border: 1px solid darkgray;
     color: #000000;
@@ -44,30 +44,30 @@
     transition: background-color 2s 1s ease-out, border 2s 1s ease-out, color 3s ease-out ;
   }
 
-  &__buttons_send {
+  &__button_send {
     background-color: #000000;
     color: #ffffff;
     @include button;
     transition: background-color 2s 1s ease-out, border 2s 1s ease-out, color 3s ease-out ;
   }
 
-  &__buttons_close:hover {
+  &__button_close:hover {
     background-color: #000000;
     color: #ffffff;
     border: 1px solid #000000;
   }
 
-  &__buttons_send:hover {
+  &__button_send:hover {
     background-color: #ffffff;
     color: #000000;
     border: 1px solid darkgray;
   }
 
-  &__buttons_close:hover, &__buttons_send:hover {
+  &__button_close:hover, &__button_send:hover {
     @include roboto-font(55px, 23px, 500);
   }
 
-  &__buttons_send::before {
+  &__button_send::before {
     content: "\2b";
     margin-right: 10px;
     font-family: FontAwesome;

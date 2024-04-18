@@ -17,7 +17,7 @@
   gap: 20px;
   justify-content: left;
   margin-left: 20px;
-  overflow: scroll;
+  overflow: auto;
   align-items: end;
 }
 

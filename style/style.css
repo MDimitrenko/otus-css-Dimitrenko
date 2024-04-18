@@ -224,7 +224,7 @@
   gap: 20px;
   justify-content: left;
   margin-left: 20px;
-  overflow: scroll;
+  overflow: auto;
   align-items: end;
 }
 
@@ -236,7 +236,7 @@
   #Designers {
     margin-left: 20px;
   }
-  .designers-section__title_mobile {
+  .designers-section__title-mobile {
     line-height: 21px;
     font-size: 18px;
   }
@@ -397,7 +397,7 @@
   margin: 25px 0;
 }
 
-.strong-points__title {
+.strong-points-section__title {
   margin-left: 258px;
 }
 
@@ -409,7 +409,7 @@
   .strong-point-item__img {
     order: 2;
   }
-  .strong-points__title {
+  .strong-points-section__title {
     margin-left: 20px;
     line-height: 21px;
     font-size: 18px;
@@ -556,7 +556,7 @@ address {
   gap: 20px;
   justify-content: center;
 }
-.modal-form__buttons_close {
+.modal-form__button_close {
   background-color: #ffffff;
   border: 1px solid darkgray;
   color: #000000;
@@ -570,7 +570,7 @@ address {
   transition: all 0.3s ease;
   transition: background-color 2s 1s ease-out, border 2s 1s ease-out, color 3s ease-out;
 }
-.modal-form__buttons_send {
+.modal-form__button_send {
   background-color: #000000;
   color: #ffffff;
   width: 180px;
@@ -583,24 +583,24 @@ address {
   transition: all 0.3s ease;
   transition: background-color 2s 1s ease-out, border 2s 1s ease-out, color 3s ease-out;
 }
-.modal-form__buttons_close:hover {
+.modal-form__button_close:hover {
   background-color: #000000;
   color: #ffffff;
   border: 1px solid #000000;
 }
-.modal-form__buttons_send:hover {
+.modal-form__button_send:hover {
   background-color: #ffffff;
   color: #000000;
   border: 1px solid darkgray;
 }
-.modal-form__buttons_close:hover, .modal-form__buttons_send:hover {
+.modal-form__button_close:hover, .modal-form__button_send:hover {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
   line-height: 55px;
   font-size: 23px;
 }
-.modal-form__buttons_send::before {
+.modal-form__button_send::before {
   content: "+";
   margin-right: 10px;
   font-family: FontAwesome;
@@ -810,19 +810,19 @@ h4 {
     display: none;
   }
 }
-.section__title {
+.section-title {
   transform: rotate(-90deg);
   margin-right: 0;
 }
 
 @media (max-width: 768px) and (min-width: 451px) {
-  .section__title {
+  .section-title {
     transform: none;
     margin-right: 0;
   }
 }
 @media (max-width: 450px) {
-  .section__title {
+  .section-title {
     transform: none;
     line-height: 21px;
     font-size: 18px;
